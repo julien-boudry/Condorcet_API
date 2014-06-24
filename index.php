@@ -27,7 +27,6 @@ require 'Condorcet/lib/Condorcet/Condorcet.php';
 if (!isset($_POST['candidates']) || !isset($_POST['votes']) )
 {
 	echo json_encode(false) ;
-	var_dump($_POST);
 	exit();
 }
 
