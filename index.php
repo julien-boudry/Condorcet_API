@@ -17,6 +17,7 @@ function isJson ($string)
 	}
 
 
+// Include Concorcet Class
 require 'Condorcet/lib/Condorcet/Condorcet.php';
 
 
