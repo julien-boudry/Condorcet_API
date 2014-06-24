@@ -1,7 +1,7 @@
 Condorcet API
 ===========================
 
-Minimal http API sitting on the capabilities of the class **[Condorcet](https://github.com/julien-boudry/Condorcet_Schulze-PHP_Class)**. Red it documentation ! And read the very very short and simple code of this API.
+Minimal http API sitting on the capabilities of the class **[Condorcet](https://github.com/julien-boudry/Condorcet_Schulze-PHP_Class)**. Read it documentation ! And read the very very short and simple code of this API.
 
 ### HTTP Post Param :   
 **candidates** _Text file or Json listing the candidates_     
