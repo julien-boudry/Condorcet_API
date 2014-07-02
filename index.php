@@ -1,10 +1,5 @@
 <?php
 
-function exception_error_handler($errno, $errstr, $errfile, $errline ) {
-    throw new ErrorException($errstr, 0, $errno, $errfile, $errline);
-}
-set_error_handler("exception_error_handler");
-
 function isJson ($string)
 	{
 		// try to decode string
@@ -60,9 +55,9 @@ try
 
 		echo json_encode($result);
 }
-catch (Exception $e) 
+catch (Condorcet\CondorcetException $e) 
 {
-    echo json_encode( array( 'Error' => $e->getMessage() ) );
+    echo json_encode( array( 'Error' => true, 'ErrorMessage' => $e->getMessage(), 'ErrorCode' => $e->getCode() ) );
 }
 
 

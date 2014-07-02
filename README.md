@@ -12,5 +12,5 @@ _(optionnal)_ **methods** _Algorithm name to use. Default is Schulze Winning_
 ### Return :    
 
 **Success** Json array of ranking    
-**Error** Json array like ```php <?php json_encode( array( 'Error' => $e->getMessage() ) );```     
+**Error** Json array like ```php <?php json_encode( array( 'Error' => true, 'ErrorMessage' => $e->getMessage(), 'ErrorCode' => $e->getCode() ) );```     
 **absence of certain parameters.** : Json false value    
