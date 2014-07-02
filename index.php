@@ -1,17 +1,5 @@
 <?php
 
-function isJson ($string)
-	{
-		// try to decode string
-		json_decode($string);
-
-		// check if error occured
-		$isValid = json_last_error() === JSON_ERROR_NONE;
-
-		return $isValid;
-	}
-
-
 // Include Concorcet Class
 require 'Condorcet/lib/Condorcet/Condorcet.php';
 
@@ -31,7 +19,7 @@ try
 		$calculator = new Condorcet\Condorcet() ;
 
 		// Candidates
-		if (isJson($_POST['candidates']))
+		if (Condorcet\Condorcet::isJson($_POST['candidates']))
 		{
 			$calculator->jsonCandidates($_POST['candidates']);
 		}
@@ -41,7 +29,7 @@ try
 		}
 
 	// Votes
-		if (isJson($_POST['votes']))
+		if (Condorcet\Condorcet::isJson($_POST['votes']))
 		{
 			$calculator->jsonVotes($_POST['votes']);
 		}
