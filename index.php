@@ -39,7 +39,7 @@ try
 		}
 
 	// Result
-		$result = $calculator->getResult( (isset($_POST['method']) ? isset($_POST['method']) : true) );
+		$result = $calculator->getResult( (isset($_POST['method']) ? $_POST['method'] : true) );
 
 		echo json_encode($result);
 }
